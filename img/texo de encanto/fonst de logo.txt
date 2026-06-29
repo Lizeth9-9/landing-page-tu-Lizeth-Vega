@@ -1,0 +1,35 @@
+La imagen parece usar dos tipografías diferentes:
+
+"Enncaanto" (logotipo)
+Es una fuente de estilo handwritten / rounded, con terminaciones suaves y un aspecto amigable.
+Las más parecidas son:
+Quicksand (la más cercana)
+Comfortaa
+Nunito
+VAG Rounded
+M PLUS Rounded 1c
+
+La que más se asemeja por la forma de la E, las a redondeadas y la t es Comfortaa o Quicksand. Sin embargo, noto que algunas letras (como la "E" y la doble "a") parecen haber sido ajustadas manualmente para crear un logotipo único.
+
+"ENDULZANDO CON PROPÓSITO" (eslogan)
+
+Es una fuente sans serif, en mayúsculas, con bastante espaciado entre letras (tracking).
+Las más similares son:
+Montserrat SemiBold
+Gotham
+Avenir Next Demi Bold
+Poppins SemiBold
+
+La más probable es Montserrat SemiBold con un tracking de aproximadamente 200–300.
+
+Mi estimación
+Logo: Comfortaa (modificada) ★★★★★
+Alternativa: Quicksand ★★★★☆
+Eslogan: Montserrat SemiBold + tracking amplio ★★★★★
+
+Si tu objetivo es recrear este logo casi idéntico, usaría:
+
+Comfortaa Bold para "Enncaanto" (con pequeños ajustes en las letras).
+Montserrat SemiBold para el eslogan.
+
+Si quieres, también puedo ayudarte a encontrar la fuente exacta (o la más cercana al 99%) analizando las formas de cada letra con más detalle.
