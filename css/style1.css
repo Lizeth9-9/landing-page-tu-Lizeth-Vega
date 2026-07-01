@@ -27,7 +27,9 @@ body {
     font-family: var(--fuente-cuerpo);
 }
 
-h1 h2 {
+h1,
+h2,
+h3 {
     font-family: var(--fuente-titulos);
 }
 
@@ -121,23 +123,24 @@ main {
     padding-top: 40px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 60px;
 }
 
 main section {
-    height: 40vh;
+    min-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 26px 24px;
-    border-radius: 20px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px 30px;
+    border-radius: 24px;
+    /* box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05); me gusta esta sombra  */
 }
 
 #inicio {
     background: transparent;
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -154,13 +157,15 @@ main section {
     font-size: 11px;
     color: var(--color-botones);
     line-height: 1.3;
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.6);
 }
 #inicio h2 {
     color: var(--color-menta);
     font-size: 55px;
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.6);
 }
 #inicio p {
-    color: var(--fuente-cuerpo);
+    color: var(--color-text-primary);
     font-size: 9px;
     line-height: 1.7;
 }
@@ -174,6 +179,80 @@ main section {
     text-decoration: none;
     font-weight: 600;
     font-size: 13px;
+}
+
+.seccion-cristal {
+    position: relative;
+    overflow: hidden;
+     padding:30px 20px;
+    background: transparent;
+    box-shadow: none;
+    
+}
+
+.decoracion-flotante {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    opacity: 0.55;
+    z-index: 0;
+    animation: flotar 8s ease-in-out infinite;
+}
+
+.decoracion-flotante.menta {
+    width: 150px;
+    height: 150px;
+    background: var(--color-menta);
+    top: -50px;
+    left: -60px;
+}
+
+.decoracion-flotante.rosa {
+    width: 110px;
+    height: 110px;
+    background: var(--color-botones);
+    bottom: -40px;
+    right: -50px;
+    animation-delay: 2s;
+}
+
+@keyframes flotar {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+/* Capa 2: la tarjeta de cristal, ENCIMA */
+.contenido-tarjeta {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 420px;
+    padding: 30px 24px;
+    background: rgba(255, 255, 255, 0.22);
+
+    backdrop-filter: blur(14px);
+
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+#informacion{
+    min-height:auto;
+}
+
+#informacion p {
+    text-align: justify;
+    font-family: var(--fuente-cuerpo1);
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 12px;
 }
 
 main section h2 {
