@@ -286,7 +286,7 @@ main section h2 {
 
 /* TARJETAS DE NUESTROS SERVICIOS -CRISTAL- */
 
-#tarjeta-servicio {
+.tarjeta-servicio {
     width: 100%;
     max-width: 500px;
     padding: 20px;
@@ -296,16 +296,32 @@ main section h2 {
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
+
 .icono-servicio {
     width: 80px;
     display: block;
     margin: 0 auto 18px;
 }
 
-#tarjeta-servicio a {
+.tarjeta-servicio a {
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
+}
+
+#galeria {
+    padding: 40px 20px;
+}
+
+.contenedor-galeria {
+    display: grid;
+    gap: 20px;
+}
+
+.contenedor-galeria img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
 }
 
 /* #region MEDIA QUERIES */
