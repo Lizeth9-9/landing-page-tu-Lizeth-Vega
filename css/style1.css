@@ -143,6 +143,18 @@ header .fa-bars {
     cursor: pointer;
 }
 
+.menu-hide {
+    display: none;
+
+}
+
+.fa-bars {
+    display: block;
+    font-size: 28px;
+    color: var(--color-text-primary);
+    cursor: pointer;
+}
+
 /* #endregion */
 
 /* #region NAV */
@@ -466,8 +478,8 @@ footer {
     gap: 40px;
     align-items: center;
 }
-.footer-encanto p{
-    max-width:320px;
+.footer-encanto p {
+    max-width: 320px;
 }
 .footer-col {
     display: flex;
@@ -503,7 +515,7 @@ footer p {
     text-align: center;
     font-size: 15px;
     line-height: 1.5;
-}   
+}
 .redes-sociales {
     display: flex;
     flex-direction: column;
@@ -542,6 +554,16 @@ footer p {
     #inicio h2 {
         font-size: 75px;
     }
+
+    .menu-hide {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .fa-bars {
+        display: none;
+    }
     .contenedor-galeria {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -550,40 +572,40 @@ footer p {
         flex-direction: row;
     }
 
-#testimonios {
-    display: flex;
-    flex-direction: column;
-}
-#testimonios .contenedor-testimonios {
-    display: flex;
-    gap: 25px;
-}
+    #testimonios {
+        display: flex;
+        flex-direction: column;
+    }
+    #testimonios .contenedor-testimonios {
+        display: flex;
+        gap: 25px;
+    }
 
-footer {
-    flex-direction: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    text-align: left;
-}
+    footer {
+        flex-direction: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
 
-.footer-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-}
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 
-.footer-col {
-    flex: 1;    
-    align-items: flex-start;
-    text-align: left;
-}
+    .footer-col {
+        flex: 1;
+        align-items: flex-start;
+        text-align: left;
+    }
 
-.footer-end {
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    text-align: right;
-}
+    .footer-end {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+    }
 }
 /* @media (min-width: 700px) {
     body {
