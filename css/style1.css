@@ -138,7 +138,7 @@ main section {
 }
 /* #endregion */
 
-/* HERO */
+/* #region HERO */
 #inicio {
     background: transparent;
     box-shadow: none;
@@ -168,13 +168,13 @@ main section {
 }
 #inicio p {
     color: var(--color-text-primary);
-    font-size: 9px;
+    font-size: 14px;
     line-height: 1.7;
+    max-width: 400px;
 }
-
 /* #endregion */
 
-/* BOTON */
+/* #region BOTON */
 .boton {
     display: inline-block;
     margin-top: 28px;
@@ -188,7 +188,7 @@ main section {
 }
 /* #endregion */
 
-/* INFORMACION */
+/* #region INFORMACION */
 .seccion-cristal {
     position: relative;
     overflow: hidden;
@@ -274,17 +274,13 @@ main section h2 {
 
 /* #endregion */
 
-@keyframes flotar {
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-18px);
-    }
-}
+/*  #region TARJETAS DE NUESTROS SERVICIOS -CRISTAL- */
 
-/* TARJETAS DE NUESTROS SERVICIOS -CRISTAL- */
+.contenedor-servicios {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
 
 .tarjeta-servicio {
     width: 100%;
@@ -309,8 +305,20 @@ main section h2 {
     text-decoration: none;
 }
 
+@keyframes flotar {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-18px);
+    }
+}
+/* #endregion */
+
+/* #region GALERIA */
 #galeria {
-    padding: 40px 20px;
+    width: 100%;
 }
 
 .contenedor-galeria {
@@ -320,11 +328,149 @@ main section h2 {
 
 .contenedor-galeria img {
     width: 100%;
+    height: 260px;
+    object-fit: cover;
     border-radius: 20px;
-    display: block;
+    transition: 0.4s;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+.contenedor-galeria img:hover {
+    transform: scale(1.03);
 }
 
+/* #endregion */
+
+/* #region TESTIMONIOS */
+
+.tarjeta-testimonio {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    max-width: 450px;
+}
+/* #endregion */
+
+/* #region CONTACTO */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(14px);
+    padding: 30px;
+    border-radius: 25px;
+    margin: 0 auto;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: var(--color-botones);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--color-menta);
+    transform: translateY(-3px);
+}
+/* #endregion */
+
+/* #region SUBIR */
+#botonSubir {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--color-botones);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    z-index: 999;
+}
+#botonSubir:hover {
+    transform: translateY(-10px);
+    background: var(--color-menta);
+}
+
+/* #endregion */
+
+/* #region FOOTER */
+footer {
+    margin-top: 80px;
+    padding: 50px 30px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(15px);
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+/* #endregion */
+
 /* #region MEDIA QUERIES */
+
+/*escritorio */
+
+@media (min-width: 1100px) {
+    .contenedor-galeria {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .contenedor-servicios {
+        flex-direction: row;
+    }
+}
+
+#testimonios {
+    display: flex;
+    flex-direction: column;
+}
+#testimonios .contenedor-testimonios {
+    display: flex;
+    gap: 25px;
+}
+
 /* @media (min-width: 700px) {
     body {
         padding-top: 90px;
@@ -352,3 +498,11 @@ main section h2 {
 } */
 
 /* #endregion */
+
+/*tablet*/
+/* .contenedor-servicios{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+ */
