@@ -127,7 +127,6 @@ main {
 }
 
 main section {
-    min-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,7 +136,9 @@ main section {
     border-radius: 24px;
     /* box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05); me gusta esta sombra  */
 }
+/* #endregion */
 
+/* HERO */
 #inicio {
     background: transparent;
     box-shadow: none;
@@ -147,6 +148,7 @@ main section {
     justify-content: center;
     text-align: right;
     letter-spacing: 2px;
+    min-height: 70vh;
     width: 100%;
     margin-top: 40px;
     padding: 60px 48px;
@@ -169,6 +171,10 @@ main section {
     font-size: 9px;
     line-height: 1.7;
 }
+
+/* #endregion */
+
+/* BOTON */
 .boton {
     display: inline-block;
     margin-top: 28px;
@@ -180,14 +186,15 @@ main section {
     font-weight: 600;
     font-size: 13px;
 }
+/* #endregion */
 
+/* INFORMACION */
 .seccion-cristal {
     position: relative;
     overflow: hidden;
-     padding:30px 20px;
+    padding: 30px 20px;
     background: transparent;
     box-shadow: none;
-    
 }
 
 .decoracion-flotante {
@@ -215,6 +222,57 @@ main section {
     right: -50px;
     animation-delay: 2s;
 }
+/* Capa 2: la tarjeta de cristal, ENCIMA */
+.contenido-tarjeta {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px 24px;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(14px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+#informacion {
+    min-height: auto;
+}
+
+#informacion h3 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#informacion p {
+    text-align: justify;
+    font-family: var(--fuente-cuerpo1);
+    font-size: 12px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+.lista-valores {
+    list-style: none;
+    padding: 0;
+    text-align: start;
+    color: var(--fuente-cuerpo);
+
+    font-size: 15px;
+}
+main section h2 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-text-primary);
+    margin-bottom: 18px;
+}
+
+#Testimonios {
+    min-height: 50vh;
+}
+
+/* #endregion */
 
 @keyframes flotar {
     0%,
@@ -226,42 +284,30 @@ main section {
     }
 }
 
-/* Capa 2: la tarjeta de cristal, ENCIMA */
-.contenido-tarjeta {
-    position: relative;
-    z-index: 1;
+/* TARJETAS DE NUESTROS SERVICIOS -CRISTAL- */
 
+#tarjeta-servicio {
     width: 100%;
-    max-width: 420px;
-    padding: 30px 24px;
-    background: rgba(255, 255, 255, 0.22);
-
-    backdrop-filter: blur(14px);
-
+    max-width: 500px;
+    padding: 20px;
     border-radius: 24px;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(14px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
-
-#informacion{
-    min-height:auto;
+.icono-servicio {
+    width: 70px;
+ 
+    display: block;
+    margin: 0 auto 18px;
 }
 
-#informacion p {
-    text-align: justify;
-    font-family: var(--fuente-cuerpo1);
-    font-size: 12px;
-    line-height: 1.7;
-    margin-bottom: 12px;
+#tarjeta-servicio a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
 }
-
-main section h2 {
-    font-family: var(--fuente-titulos);
-    color: var(--color-text-primary);
-    margin-bottom: 18px;
-}
-
-/* #endregion */
 
 /* #region MEDIA QUERIES */
 /* @media (min-width: 700px) {
