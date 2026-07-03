@@ -613,12 +613,13 @@ footer p {
     }
 
     header .menu img {
-        width: 250px;
+        width: 500px;
     }
 
     header .menu nav ul {
         flex-direction: row;
-        gap: 30px;
+        padding: 100px 200px 100px 5px;
+        gap: 50px;
     }
     .menu-hide {
         display: flex;
