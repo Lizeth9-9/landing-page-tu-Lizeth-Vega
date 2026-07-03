@@ -117,7 +117,6 @@ header .menu {
 }
 
 header .menu nav ul {
-    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -145,7 +144,11 @@ header .fa-bars {
 
 .menu-hide {
     display: none;
+    flex-direction: column;
+}
 
+.menu-hide.activo {
+    display: flex;
 }
 
 .fa-bars {
@@ -213,7 +216,7 @@ main section {
     color: var(--color-text-secundary);
 }
 #inicio h1 {
-    font-size: 11px;
+    font-size: 18px;
     color: var(--color-botones);
     line-height: 1.3;
     text-shadow: 0 2px 12px rgba(255, 255, 255, 0.6);
@@ -234,7 +237,6 @@ main section {
 /* #region INFORMACION */
 .seccion-cristal {
     position: relative;
-    overflow: hidden;
     padding: 30px 20px;
     background: transparent;
     box-shadow: none;
@@ -243,7 +245,7 @@ main section {
 .decoracion-flotante {
     position: absolute;
     border-radius: 50%;
-    filter: blur(2px);
+    filter: blur(30px);
     opacity: 0.55;
     z-index: 0;
     animation: flotar 8s ease-in-out infinite;
@@ -300,19 +302,15 @@ main section {
 .lista-valores {
     list-style: none;
     padding: 0;
-    text-align: start;
-    color: var(--fuente-cuerpo);
-
+    text-align: justify;
     font-size: 15px;
+    color: var(--color-text-primary);
+    font-family: var(--fuente-cuerpo);
 }
 main section h2 {
     font-family: var(--fuente-titulos);
     color: var(--color-text-primary);
     margin-bottom: 18px;
-}
-
-#Testimonios {
-    min-height: 50vh;
 }
 
 /* #endregion */
@@ -332,20 +330,28 @@ main section h2 {
     border-radius: 24px;
     background: rgba(255, 255, 255, 0.22);
     backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 0px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
 }
 
-.icono-servicio {
+.icono-servicio1 {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+.icono-servicio2 {
     width: 80px;
     display: block;
-    margin: 0 auto 18px;
+    margin: 0 auto;
 }
 
 .tarjeta-servicio a {
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
+    color: var(--color-text-primary);
+    font-family: var(--fuente-cuerpo);
+    font-weight: 600;
 }
 
 @keyframes flotar {
@@ -389,16 +395,65 @@ main section h2 {
 .tarjeta-testimonio {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    justify-content: space-between;
+    max-width: 360px;
+    min-height: 260px;
+    padding: 32px 28px;
+    backdrop-filter: blur(16px);
     background: rgba(255, 255, 255, 0.22);
-    backdrop-filter: blur(14px);
-    border-radius: 20px;
+    border-radius: 26px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: 0.35s ease;
     margin-bottom: 20px;
-    max-width: 450px;
 }
+
+.tarjeta-testimonio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.12);
+}
+
 .tarjeta-testimonio h4 {
     color: var(--color-botones);
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.tarjeta-testimonio p {
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--color-text-primary);
+}
+
+.tarjeta-testimonio span {
+    color: #f7b731;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+#testimonios .contenedor-testimonios {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-testimonio {
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 70px 30px 35px;
+}
+
+.tarjeta-testimonio::before {
+    content: "“";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 120px;
+    font-family: Georgia, serif;
+    color: rgba(232, 116, 138, 0.12);
 }
 
 /* #endregion */
@@ -551,10 +606,20 @@ footer p {
 /*escritorio */
 
 @media (min-width: 1100px) {
-    #inicio h2 {
-        font-size: 75px;
+    header .menu {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
+    header .menu img {
+        width: 250px;
+    }
+
+    header .menu nav ul {
+        flex-direction: row;
+        gap: 30px;
+    }
     .menu-hide {
         display: flex;
         flex-direction: row;
@@ -564,12 +629,54 @@ footer p {
     .fa-bars {
         display: none;
     }
-    .contenedor-galeria {
-        grid-template-columns: repeat(4, 1fr);
+
+    #inicio {
+        min-height: 90vh;
+        padding: 80px 100px;
     }
 
+    #inicio h1 {
+        font-size: 18px;
+    }
+
+    #inicio h2 {
+        font-size: 75px;
+    }
+
+    #inicio p {
+        font-size: 18px;
+        max-width: 500px;
+    }
+
+    .contenido-tarjeta {
+        max-width: 850px;
+        padding: 50px;
+    }
+    #informacion p {
+        font-size: 16px;
+    }
+
+    #informacion p {
+        font-size: 16px;
+    }
     .contenedor-servicios {
         flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .tarjeta-servicio {
+        flex: 1;
+    }
+    .contenedor-galeria {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .contenedor-testimonios {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
     }
 
     #testimonios {
@@ -579,6 +686,10 @@ footer p {
     #testimonios .contenedor-testimonios {
         display: flex;
         gap: 25px;
+    }
+
+    .container {
+        max-width: 700px;
     }
 
     footer {
