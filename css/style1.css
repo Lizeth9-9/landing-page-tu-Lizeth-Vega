@@ -794,6 +794,12 @@ footer p {
         gap: 30px;
         flex-wrap: wrap;
     }
+    .contenedor-galeria.limitada {
+        max-height: 260px; /* ajusta según cuántas filas quieras mostrar */
+        overflow: hidden;
+    }
+
+    /* TESTIMONIOS */
 
     #testimonios {
         display: flex;

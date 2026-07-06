@@ -11,7 +11,7 @@ botonMenu.addEventListener('click', () => {
 const botonContenedor = document.querySelector('.contenedor-galeria');
 const botonGaleria = document.querySelector('#vermasgaleria');
 
-botonContenedor.addEventListener('click', (e) => {
+botonGaleria.addEventListener('click', (e) => {
     if (botonContenedor.classList.contains('limitada')) {
         botonContenedor.classList.remove('limitada');
         botonGaleria.textContent = 'Ver menos';
@@ -20,7 +20,6 @@ botonContenedor.addEventListener('click', (e) => {
         botonGaleria.textContent = 'Ver más';
     }
 });
-
 
 //FORMULARIO//
 
