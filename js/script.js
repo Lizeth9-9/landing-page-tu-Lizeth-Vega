@@ -6,6 +6,22 @@ botonMenu.addEventListener('click', () => {
     menu.classList.toggle('activo')
 });
 
+// GALERIA VER MAS //
+
+const botonContenedor = document.querySelector('.contenedor-galeria');
+const botonGaleria = document.querySelector('#vermasgaleria');
+
+botonContenedor.addEventListener('click', (e) => {
+    if (botonContenedor.classList.contains('limitada')) {
+        botonContenedor.classList.remove('limitada');
+        botonGaleria.textContent = 'Ver menos';
+    } else {
+        botonContenedor.classList.add('limitada');
+        botonGaleria.textContent = 'Ver más';
+    }
+});
+
+
 //FORMULARIO//
 
 const form = document.querySelector('#fcontacto');
@@ -15,7 +31,7 @@ const movil = document.querySelector('#movil');
 const errorNombre = document.querySelector('#error-nombre');
 const erroremail = document.querySelector('#error-email');
 const errormovil = document.querySelector('#error-movil');
-
+const mensajeExito = document.querySelector('#mensaje-exito');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -45,7 +61,7 @@ form.addEventListener('submit', (e) => {
     }
 
     if (!error) {
-
+        mensajeExito.classList.add('visible');
         form.reset();
     }
 });
