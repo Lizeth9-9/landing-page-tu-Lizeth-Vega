@@ -1,4 +1,4 @@
-//MENU HAMBURGUESA //
+//MENU HAMBURGUESA //   
 
 const botonMenu = document.querySelector('.fa-bars')
 const menu = document.querySelector('.menu-hide')
@@ -14,7 +14,7 @@ const botonGaleria = document.querySelector('#vermasgaleria');
 botonGaleria.addEventListener('click', (e) => {
     if (botonContenedor.classList.contains('limitada')) {
         botonContenedor.classList.remove('limitada');
-        botonGaleria.textContent = 'Ver menos';
+        botonGaleria.textContent = 'Ver ';
     } else {
         botonContenedor.classList.add('limitada');
         botonGaleria.textContent = 'Ver más';
@@ -64,22 +64,6 @@ form.addEventListener('submit', (e) => {
         form.reset();
     }
 });
-
-
-
-
-
-
-
-
-// if (email === '') {
-//     document.querySelector('#erroremail').textContent = "Debe rellenar E-mail"
-//     error = true;
-// }
-// else
-//     if (error) return;
-
-
 
 
 
