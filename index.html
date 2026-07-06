@@ -273,14 +273,14 @@
                             resultado superó nuestras expectativas."
                         </p>
 
-                        <span>🌸🌸🌸🌸🌸</span>
+                        <span>⭐⭐⭐⭐⭐</span>
 
                         <h4>Priscila P.</h4>
                     </div>
                 </div>
             </section>
 
-            <form id="contacto" action="#contacto">
+            <form action="contacto" id="fcontacto" >
                 <div class="container">
                     <h2>Contacto</h2>
                     <div class="campo">
@@ -291,6 +291,9 @@
                             name="nombre"
                             placeholder="Tu nombre"
                         />
+                         <span class="error-message" id="error-nombre"
+                        >El nombre es obligatorio</span 
+                    >  <!-- se valida para que aparezca error en caso de no ser rellenado -->
                     </div>
                     <div class="campo">
                         <label for="email">Email</label>
@@ -300,6 +303,9 @@
                             name="email"
                             placeholder="correo@ejemplo.com"
                         />
+                          <span class="error-message" id="error-email"
+                        >El email es obligatorio</span 
+                    >  <!-- se valida para que aparezca error en caso de no ser rellenado -->
                     </div>
                     <div class="campo">
                         <label for="movil">Movil</label>
@@ -309,14 +315,17 @@
                             name="movil"
                             placeholder="Ej: 700123456"
                         />
+                        <span class="error-message" id="error-movil"
+                        >El movil es obligatorio</span 
+                    >  <!-- se valida para que aparezca error en caso de no ser rellenado -->
                     </div>
 
                     <div class="campo">
                         <label for="fecha-evento">Fecha de Evento</label>
                         <input
-                            type="date"
-                            id="fecha-evento"
-                            name="fecha-evento"
+                            type ="date"
+                            id="fecha"
+                            name="fecha"
                             required
                         />
                     </div>

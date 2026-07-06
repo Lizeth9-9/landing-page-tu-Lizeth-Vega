@@ -481,9 +481,16 @@ textarea {
     width: 100%;
     padding: 12px;
     border-radius: 10px;
-    border: none;
+    border: 1px solid transparent;
     margin-top: 10px;
     padding: 20px;
+    font-family: var(--fuente-cuerpo);
+    cursor: pointer;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--color-menta);
 }
 
 h2 {
@@ -496,8 +503,8 @@ button {
     border: none;
     border-radius: 30px;
     background: var(--color-botones);
+    font-family: var(--fuente-cuerpo);
     color: white;
-    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
@@ -511,6 +518,22 @@ textarea {
     min-height: 140px;
     resize: vertical;
     margin-bottom: 25px;
+}
+.error-message {
+    color: var(--color-botones);
+    font-weight: 600;
+    font-size: 12px;
+    display: block;
+    font-family: var(--fuente-cuerpo);
+    min-height: 30px;
+    visibility: hidden;
+    transition: visibility 0.3s;
+}
+.error-message::before {
+    content: "⚠️";
+}
+.error-message.visible {
+    visibility: visible;
 }
 
 /* #endregion */
