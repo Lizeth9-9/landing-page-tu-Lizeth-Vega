@@ -27,7 +27,7 @@
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#informacion">Conocenos</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>                 
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
                 <i class="fas fa-bars"></i>
             </nav>
@@ -221,9 +221,9 @@
         </section>
 
         <!-- Sección de contacto -->
-        <section id="contacto" class="section-comun ">
+        <section id="contacto" class="section-comun section-contacto">
             <form action="contacto" id="fcontacto">
-                <div class="container">
+                <div class="contacto-container">
                     <h2>Contacto</h2>
                     <div class="campo">
                         <label for="nombre">Nombre</label>
@@ -247,6 +247,7 @@
                     <div class="campo">
                         <label for="fecha-evento">Fecha de Evento</label>
                         <input type="date" id="fecha" name="fecha" required />
+                        <span class="error-message" id="error-movil">El movil es obligatorio</span>
                     </div>
 
                     <div class="campo">
@@ -262,13 +263,17 @@
                                 Eventos Especiales
                             </option>
                         </select>
+
                     </div>
 
-                    <label for="detalles">Cuéntame tu idea (porciones, sabores,
-                        temática...):</label>
-                    <textarea id="detalles" name="detalles"
-                        placeholder="Ej: Tarta de chocolate para 10 personas temática de Disney..."></textarea>
+                    <div class="campo">
+                        <label for="detalles">Cuéntame tu idea (porciones, sabores,
+                            temática...):</label>
+                        <span class="error-message" id="error-movil">El movil es obligatorio</span>
+                        <textarea id="detalles" name="detalles"
+                            placeholder="Ej: Tarta de chocolate para 10 personas temática de Disney..."></textarea>
 
+                    </div>
                     <button type="submit">Enviar solicitud</button>
                     <p id="mensaje-exito" class="mensaje-exito">
                         ¡Solicitud enviada con éxito! 🎉
@@ -292,7 +297,6 @@
             <div class="footer-col footer-encanto">
                 <a href="index.html">
                     <img src="img/texto encanto-svg.svg" alt="Logo de Enncaantoo" /></a>
-
                 <p>
                     Creamos detalles y eventos personalizados con productos
                     dulces, salados y artesanales para hacer de cada ocasión
@@ -305,7 +309,6 @@
                 <a href="https://www.instagram.com/enncaantoo/" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
-
                 <a href="https://www.facebook.com/?locale=es_ES" target="_blank">
                     <i class="fab fa-facebook-f"></i>
                 </a>
@@ -314,24 +317,23 @@
             <div class="footer-col footer-contacto">
                 <h3>Contacto</h3>
                 <p>📩 info@encanto.com</p>
-                <p>📱 +34 684 80 33 12</p>
+                <span>📱 +34 684 80 33 12</span>
             </div>
-        </div>
 
-        <div class="footer-end">
-            <p>© 2026 Enncaantoo. Endulzando momentos con amor 💗</p>
-            <a href="#">Política de Privacidad</a>
+            <div class="footer-col footer-end">
+                <p>© 2026 Enncaantoo. Endulzando momentos con amor 💗</p>
+                <a href="#">Política de Privacidad</a>
+            </div>
+
+            <a href="https://wa.me/34684803312" class="flotanteWasap" id="Fwasap" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#inicio" id="botonSubir">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
         </div>
     </footer>
-
-
-    <a href="https://wa.me/34684803312" class="flotanteWasap" id="Fwasap" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <a href="#inicio" id="botonSubir">
-        <i class="fa-solid fa-arrow-up"></i>
-    </a>
 
     <script src="js/script.js"></script>
 </body>

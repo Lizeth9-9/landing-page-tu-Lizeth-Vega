@@ -14,7 +14,7 @@ const botonGaleria = document.querySelector('#vermasgaleria');
 botonGaleria.addEventListener('click', (e) => {
     if (botonContenedor.classList.contains('limitada')) {
         botonContenedor.classList.remove('limitada');
-        botonGaleria.textContent = 'Ver ';
+        botonGaleria.textContent = 'Ver menos ';
     } else {
         botonContenedor.classList.add('limitada');
         botonGaleria.textContent = 'Ver más';
